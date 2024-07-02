@@ -30,9 +30,8 @@ import (
 	"github.com/drk1wi/Modlishka/log"
 )
 
-// Paste your CA certificate and key in the following format
-// Ref: https://github.com/drk1wi/Modlishka/wiki/Quickstart-tutorial
-
+$ openssl genrsa -out MyRootCA.key 2048`
+$ openssl req -x509 -new -nodes -key MyRootCA.key -sha256 -days 1024 -out MyRootCA.pem
 const CA_CERT = `-----BEGIN CERTIFICATE-----
 MIIDRDCCAiwCCQC/MUuFNX64sjANBgkqhkiG9w0BAQsFADBkMQswCQYDVQQGEwJw
 bDELMAkGA1UECAwCcGwxCzAJBgNVBAcMAnBsMQswCQYDVQQKDAJwbDELMAkGA1UE
